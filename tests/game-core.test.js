@@ -291,6 +291,7 @@ test('Daily share text does not reveal university names or rankings', () => {
   const text = core.createDailyShareText(game.state);
   assert.equal(text.includes(firstName), false);
   assert.equal(text.includes(` ${firstRank} `), false);
+  assert.equal(/[🟩🟥]/u.test(text), true);
 });
 
 test('Daily date key uses UTC', () => {

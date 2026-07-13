@@ -393,7 +393,7 @@
   }
 
   function createDailyShareText(state) {
-    const pattern = (state.answerPattern || []).map(item => item === 'correct' ? 'G' : 'R').join('');
+    const pattern = (state.answerPattern || []).map(item => item === 'correct' ? '🟩' : '🟥').join('');
     return [
       'Dono Daily Rankings',
       formatDailyDate(state.date),

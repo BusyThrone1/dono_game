@@ -46,6 +46,8 @@ The most recent format, pool and Global difficulty are also saved locally. If `l
 
 Daily Challenge is a static, front-end-only shared challenge. It uses the Global exact-ranked pool and generates one deterministic sequence per day.
 
+Daily Challenge uses the same Three Lives streak scoring as the standard Three Lives mode: +1 for streaks of 1-2, +2 for 3-4, +3 for 5-9, and +5 for 10 or more.
+
 The rollover timezone is `UTC`. The date key format is `YYYY-MM-DD`, built from UTC date parts rather than locale-formatted strings.
 
 The seed source is:
