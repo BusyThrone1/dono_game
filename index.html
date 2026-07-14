@@ -1188,7 +1188,7 @@ main {
     };
     const fail = () => { status.textContent = ''; };
     if (navigator.share) {
-      navigator.share({ title: 'Dono Daily Challenge', text, url }).then(done).catch(() => fallbackCopy(text) ? done() : fail());
+      navigator.share({ title: 'Dono Daily Challenge', text }).then(done).catch(() => fallbackCopy(text) ? done() : fail());
     } else if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(text).then(done).catch(() => fallbackCopy(text) ? done() : fail());
     } else if (fallbackCopy(text)) {
@@ -1217,7 +1217,7 @@ main {
     };
     const fail = () => { status.textContent = ''; };
     if (navigator.share) {
-      navigator.share({ title: 'Dono Rankings', text, url }).then(done).catch(() => fallbackCopy(text) ? done() : fail());
+      navigator.share({ title: 'Dono Rankings', text }).then(done).catch(() => fallbackCopy(text) ? done() : fail());
     } else if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(text).then(done).catch(() => fallbackCopy(text) ? done() : fail());
     } else if (fallbackCopy(text)) {
